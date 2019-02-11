@@ -190,6 +190,8 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Temando_Shipping' => 1,
+        'Training_Dependency2' => 1,
+        'Training_Dependency' => 1,
         'Vertex_Tax' => 1
     ]
 ];
