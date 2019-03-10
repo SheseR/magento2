@@ -1,6 +1,6 @@
 <?php
 
-namespace Training\Feedback\Controller\Feedback;
+namespace Training\Feedback\Controller\Form;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 
