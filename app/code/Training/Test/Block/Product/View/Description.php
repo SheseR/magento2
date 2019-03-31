@@ -16,6 +16,9 @@ class Description extends BaseDescription
     public function beforeToHtml(
         BaseDescription $subject
     ) {
-        $subject->setTemplate('Training_Test::description.phtml');
+
+        if ($subject->getNameInLayout() === 'product.info.sku') {
+            $subject->setTemplate('Training_Test::description.phtml');
+        }
     }
 }
