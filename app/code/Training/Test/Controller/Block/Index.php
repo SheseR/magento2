@@ -3,6 +3,7 @@
 namespace Training\Test\Controller\Block;
 
 use Magento\Framework\App\Action\Action;
+use Magento\Framework\Controller\ResultFactory;
 
 /**
  * Class Index
@@ -35,8 +36,10 @@ class Index extends Action
     public function execute()
     {
         $layout = $this->layoutFactory->create();
-        $block = $layout->createBlock('Training\Test\Block\Test');
 
-        return $this->getResponse()->appendBody($block->toHtml());
+        $resultRaw = $this->resultFactory->create(ResultFactory::TYPE_RAW);
+        $resultRaw->setContents($layout->createBlock('Training\Test\Block\Test')->toHtml());
+
+        return $resultRaw;
     }
 }
