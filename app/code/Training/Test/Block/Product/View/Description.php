@@ -16,7 +16,6 @@ class Description extends BaseDescription
     public function beforeToHtml(
         BaseDescription $subject
     ) {
-
-       $subject->getProduct()->setDescription('Test description');
+        $subject->setTemplate('Training_Test::description.phtml');
     }
 }
